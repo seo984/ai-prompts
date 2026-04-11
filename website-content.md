@@ -1,3 +1,5 @@
+---
+
 # AI SEO Master Workflow Suite
 
 ## 1. Website Audit Workflow (AI / LLM Standards)
@@ -6,6 +8,7 @@
 - Accept Website/Page URL
 - Accept Target Keyword
 - Accept Industry/Niche
+- Accept Source Material / Knowledge Base (URL or Text)
 
 **Ask for Review:** Confirm inputs before audit.
 
@@ -31,6 +34,7 @@
 ### STEP 4 — Detailed Diagnostic Breakdown
 - Analyse each LLM SEO factor
 - Provide score, diagnosis, fixes, impact
+- Format the diagnostic breakdown as a **Markdown Table**
 
 **Ask for Review:** Approve diagnostics.
 
@@ -50,6 +54,7 @@
 - Business Type
 - Services Offered
 - Target Location
+- Accept Source Material / Knowledge Base (URL or Text)
 
 **Ask for Review:** Confirm inputs.
 
@@ -108,7 +113,8 @@
 - Industry/Niche
 - Target Service/Keyword
 - Location
-- Previous Buyer Journey Insights
+- Previous Buyer Journey Insights *(Automatically import the approved output from Workflow 2, Step 7)*
+- Accept Source Material / Knowledge Base (URL or Text)
 
 **Ask for Review:** Confirm inputs.
 
@@ -122,30 +128,33 @@
 
 ---
 
-### STEP 3 — Generate Core Outline Structure
-- Hero
-- Quick Answer
-- Semantic Sections
-- Problem/Need Sections
-- Process/Benefits/Cost/etc.
+### STEP 3 — Generate Comprehensive Outline Structure
+Create a detailed outline following these 16 structural points:
+1. **Hero Section / Primary Heading**: H1, 2-3 line intro, and CTAs.
+2. **Quick Answer / AI Snippet Section**: Concise explanation for LLM extraction.
+3. **Foundational Semantic Sections**: Definitions, variations, and classifications.
+4. **Problem / Symptom / Need Sections**: Signs/problems leading to the service.
+5. **Service / Product Types or Options**: Features, materials, or variations.
+6. **Process / How It Works**: Step-by-step service explanation.
+7. **Benefits, Outcomes, or Advantages**: Measurable/trustable gains.
+8. **Cost / Pricing Section**: Ranges and influencing factors.
+9. **Alternatives / Comparisons**: Comparison with other solutions.
+10. **Aftercare / Maintenance / Usage**: Post-service advice.
+11. **Risks, Safety, or Warnings**: Common risks and safety measures.
+11A. **Differentiation section**: What makes this client better than others.
+12. **Trust & E-E-A-T Signals**: Certifications, awards, or expert credentials.
+13. **Local Context / Service Area**: Suburbs, landmarks, and regional relevance.
+14. **Testimonial Section**: Social proof (to be placed before FAQ).
+15. **FAQ Section**: 5–10 LLM-optimized questions.
+16. **CTA Section**: Trustable, non-salesy encouragement to act.
 
 **Ask for Review:** Approve structure.
 
 ---
 
-### STEP 4 — Expand With AI / LLM Elements
-- Add FAQs
-- Add Trust/E-E-A-T Sections
-- Add Local Relevance
-- Add Schema Suggestions
-
-**Ask for Review:** Review additions.
-
----
-
-### STEP 5 — Finalise Detailed Outline
-- Deliver H1-H3 outline
-- Add one-line section descriptions
+### STEP 4 — Finalise Detailed Outline
+- Deliver H1-H3 outline using proper Markdown headers.
+- Add one-line section descriptions for each of the 16 points.
 
 **Ask for Review:** Approve final outline.
 
@@ -158,7 +167,8 @@
 - Website Location
 - Niche
 - Target Keywords
-- Outline/Sections
+- Outline/Sections *(Automatically import the approved Detailed Outline from Workflow 3, Step 5)*
+- Accept Source Material / Knowledge Base (URL or Text)
 
 **Ask for Review:** Confirm inputs.
 
@@ -176,6 +186,7 @@
 ### STEP 3 — Draft Content Section-by-Section
 - Write each section in order
 - Optimise for readability + SEO + AI
+- Ensure the content is written at an **8th-grade reading level** to maximize accessibility and AI extraction.
 
 **Ask for Review:** Review section draft before next.
 
@@ -220,8 +231,9 @@ Execute the requested workflow step-by-step.
 
 Rules:
 - Complete only ONE step at a time
-- Show output clearly
+- Show output clearly formatted (e.g. Markdown tables, headers)
 - Ask for review after every step
 - Wait for approval before next step
 - Maintain context across all approved steps
+- Ensure facts match the provided source material / knowledge base
 - Prioritise SEO, AI Search, and LLM optimisation best practices
