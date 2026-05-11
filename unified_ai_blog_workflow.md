@@ -1,4 +1,4 @@
-# Unified AI Blog Workflow v2.1 (Enhanced with Client Data & Webhook)
+# Unified AI Blog Workflow v2.1.1 (Enhanced with Client Data & Webhook)
 
 This is a fully operationalised, end-to-end system for creating and optimising high-converting, E-E-A-T focused content from scratch.
 
@@ -176,7 +176,8 @@ Ensure an 8th-grade reading level. Break down complex ideas with heavy use of bu
 **Step 8.3 — Output Generation**
 - Output the final, formatted, copy-paste ready blog content.
 - **Metadata Output:** Ensure the following client data is attached to the final output:
-    - **Article:** [TITLE]
+    - **Article Title:** [TITLE]
+    - **Article Body:** [ARTICLE_MARKDOWN]
     - **Client Name:** [CLIENT NAME]
     - **Website:** [CLIENT WEBSITE]
     - **Email:** [CLIENT EMAIL]
@@ -191,7 +192,8 @@ Ensure an 8th-grade reading level. Break down complex ideas with heavy use of bu
 **Step 9.1 — Send to Webhook** *(Runs automatically upon Phase 8 approval)*
 - **Webhook URL:** `https://dnseo.app.n8n.cloud/webhook-test/new-blog`
 - **Action:** Send a JSON payload containing:
-    - `article`: [FINAL_MARKDOWN_CONTENT]
+    - `article_title`: [TITLE]
+    - `article_body`: [FINAL_MARKDOWN_CONTENT]
     - `client_name`: [CLIENT_NAME]
     - `website`: [CLIENT_WEBSITE]
     - `email`: [CLIENT_EMAIL]
