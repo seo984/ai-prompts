@@ -1,13 +1,20 @@
-# Unified AI Blog Workflow v2.1.1 (Enhanced with Client Data & Webhook)
+# Unified AI Blog Workflow v2.2.1 (Optimized for AI Citations & Modern Tone)
 
-This is a fully operationalised, end-to-end system for creating and optimising high-converting, E-E-A-T focused content from scratch.
+This is a fully operationalized, end-to-end system for creating and optimizing high-converting, E-E-A-T focused content. This version is strictly configured to avoid common AI-generated patterns and ensure maximum compatibility with LLM extraction and citation.
 
 ---
 
-## Execution Rules & Process Flow
-1. **Approval Gates:** Block and wait for user approval at key stages (Client Selection, Question Selection, Final Output).
-2. **Automated Chaining:** Multiple analytical and writing steps run sequentially without stopping.
-3. **Quality Standards:** Maintain 8th-grade readability where requested, strictly adhere to factual data, and inject a strong decision layer.
+## Execution Rules & Stylistic Constraints
+1. **Approval Gates**: Block and wait for user approval at key stages (Client Selection, Question Selection, Final Output).
+2. **Strict No Contractions**: Never use apostrophe-based contractions. Use complete words (e.g., use "do not" instead of "don’t", "you are" instead of "you’re").
+3. **Strict No Em Dashes**: Do not use em dashes (—). Use standard punctuation (commas, periods, colons) or structural breaks to separate ideas.
+4. **Tone & Style**: 
+    - Speak like a real person, not a corporate entity.
+    - Sound helpful, confident, and honest, but not arrogant.
+    - Avoid being too polished, salesy, or robotic.
+    - Use simple, practical language and business-owner friendly terms.
+5. **Short Modular Paragraphs**: Every section must use short, distinct paragraphs. This is mandatory to allow AI models to cite and extract specific blocks of information accurately.
+6. **Company Promotion**: Brand-specific mentions and "our" language should be relegated to the **Phase 5 (Decision Layer)** at the end of the article, unless highly necessary for context earlier.
 
 ---
 
@@ -49,8 +56,7 @@ This is a fully operationalised, end-to-end system for creating and optimising h
 | Window Tinting | https://window-tinting.co.nz/ | roxana@tintawindow.co.nz | 1XoAaenUiYToCruemCBeCLc2VC8yI_fL0 |
 
 **Step 0.2 — Select Client**
-- **Ask User:** "Which project/client are we writing for?"
-- **Action:** Retrieve the Website, Email, and Google Folder id for the selected client to be used throughout the workflow and in the final output.
+- **Action:** Identify the specific client for the current project and retrieve their Website, Email, and Google Folder id.
 
 ---
 
@@ -58,81 +64,51 @@ This is a fully operationalised, end-to-end system for creating and optimising h
 *Goal: Extract intent, structure, and entities before writing.*
 
 **Step 1.1 — Input Topic & Keyword**
-- Accept the core topic, primary keyword, and target audience/location from the user.
+- Accept core topic, primary keyword, and target audience/location.
 
-**Step 1.2 — Strategy Prompt** *(Runs automatically)*
-*Prompt:*
-> Act as a senior SEO strategist.
-> Analyse the topic: [KEYWORD / TOPIC]
-> 1. Identify search intent (primary + secondary)
-> 2. Extract top 10 ranking patterns (headings, formats, angles)
-> 3. List important entities (locations, concepts, brands, stats)
-> 4. Identify content gaps competitors are missing
-> 5. Suggest a unique angle that improves on existing SERPs
-> Output: Intent summary, structured outline, entity list, differentiation strategy.
+**Step 1.2 — Strategy Analysis**
+- Identify search intent and extract top 10 ranking patterns.
+- List important entities (locations, concepts, brands, stats).
+- Identify **Semantic Keywords** related to the primary topic to be integrated into headings and body text.
 
 ---
 
 ## Phase 2: Data Verification (Real Data Injection)
 *Goal: Prevent AI hallucination and build E-E-A-T.*
 
-**Step 2.1 — Data Gathering Prompt**
-*Prompt:*
-> Act as a research analyst.
-> Find real, verifiable data for: [TITLE / TOPIC]
-> Sources priority: Government websites, Research papers, Industry reports, Statistical databases.
-> For each data point: Include statistic, source name, year, and a 1-line relevance explanation.
-> Avoid generic statements. Only include factual data.
+**Step 2.1 — Data Gathering**
+- Find real, verifiable data (statistics, research) from government or industry sources.
+- Prioritize data that supports the primary topic and search intent.
 
 ---
 
-## Phase 3: Drafting (Modular & Structured)
-*Goal: High-quality, section-by-section generation.*
+## Phase 3: Drafting (Modular & No Contractions)
+*Goal: High-quality, citation-friendly generation.*
 
-**Step 3.1 — Introduction**
-*Prompt:*
-> Act as an expert content writer and SEO specialist. Write the introduction for this blog:
-> Topic: [TITLE], Audience: [TARGET], Tone: [BRAND VOICE]
-> Requirements: Hook using a statistic/insight from Phase 2, define the topic, set expectations, keep it concise.
-
-**Step 3.2 — Section-by-Section Drafting**
-*Prompt:*
-> Write a detailed section for the heading: [HEADING]
-> Context: Topic: [TITLE], Entities: [LIST], Data: [STATS FROM PHASE 2]
-> Requirements: Clear subheadings, practical examples, avoid generic fluff.
+**Step 3.1 — Section-by-Section Drafting**
+- **Rule:** Use **short modular paragraphs** (2–4 sentences) to allow for easy AI extraction and citation.
+- **Rule:** Strictly use **no contractions**. Use complete words at all times.
+- **Rule:** Strictly **no em dashes**.
+- **Rule:** Relegate branding and "our" language to the Decision Layer at the end.
 
 ---
 
 ## Phase 4: Targeted Q&A & Search Optimisation
-*Goal: Capture PAA (People Also Ask) and AI Search queries based on the newly drafted core structure.*
+*Goal: Capture PAA (People Also Ask) and AI Search queries.*
 
-**Step 4.1 — Generate Seed Questions** 
-- Generate 15–20 likely related search questions based on the topic and the drafted sections.
-- Cluster them by relevance.
-- **Ask User:** "Please select/approve 2–3 target questions for AI optimisation."
-
-**Step 4.2 — Google SERP Analysis (Location-Based)** *(Runs automatically after 4.1 approval)*
-- Search Google for the approved questions using the target client location.
-- Analyse AI Overviews, Featured Snippets, Top Organic Results, PAA, and SERP Intent.
-
-**Step 4.3 — Integrate Q&A into Draft**
-- Generate actionable answers for the approved questions.
-- **Rule:** Always integrate these Q&As seamlessly into the top or relevant sections of the content. Do *not* place them as a simple FAQ list at the bottom.
+**Step 4.1 — Integrate Q&A**
+- Select 2–3 target questions related to the topic.
+- Integrate the answers seamlessly into the body text. Do not use an FAQ list.
 
 ---
 
 ## Phase 5: The Decision Layer 🧠
-*Goal: Guide readers from informational learning to mid-funnel conversion.*
+*Goal: Guide readers toward professional help.*
 
 **Step 5.1 — Decision Layer Injection**
-Instead of just explaining "what" or "how", inject specific cues to help the reader decide to choose *you*. 
-*Example Prompt for a Home Services / B2B blog:*
-> Add a new heading/section: "Can You Safely [Perform Task] Yourself — or Should You Call a Pro?"
-> In this section:
-> 1. Explain the risks or complexities (e.g., electrical danger, lost time, making the problem worse).
-> 2. List common mistakes.
-> 3. Provide a clear threshold for when professional help is safer, faster, or more cost-effective.
-> 4. Make the user feel confident to contact the company. Outline exactly what they get if they call.
+- This is the primary section for brand-specific mentions and "our company" language.
+- Provide a clear threshold for when professional help is safer, faster, or more cost-effective.
+- List common mistakes and help the user feel confident in contacting the professional team.
 
 ---
 
@@ -140,25 +116,18 @@ Instead of just explaining "what" or "how", inject specific cues to help the rea
 *Goal: Anti-generic layer and true voice matching.*
 
 **Step 6.1 — Brand Voice Injection**
-*Prompt:*
-> Analyse the following website content: [CLIENT WEBSITE FROM PHASE 0]
-> Extract tone, writing style patterns, common phrases, sentence structure.
-> Rewrite the drafted sections to match this exact tone.
-
-**Step 6.2 — Fingerprinting**
-*Prompt:*
-> Improve this content by adding: A unique framework/classification, opinionated insights, a fresh perspective, and clearer structure. Make it feel expert-driven.
+- Analyse the client's website content to match their tone and writing style.
+- Ensure the tone remains helpful and honest without being arrogant.
 
 ---
 
-## Phase 7: Enrichment (Tables, Media, Quotes)
-*Goal: Robustness, LLM multimodal context, and visual appeal.*
+## Phase 7: Enrichment (Tables & Quotes)
+*Goal: Robustness and multi-modal context.*
 
-**Step 7.1 — Media & Tables Prompt**
-*Prompt:*
-> 1. Suggest 3 relevant images for this section (include type, caption, SEO alt text).
-> 2. Convert this section into a comparison table where useful (clear columns, decision-making value).
-> 3. Generate a realistic expert-style quote for this topic (insightful, adds authority).
+**Step 7.1 — Media & Tables**
+- Create comparison tables where useful for decision-making.
+- Generate realistic expert-style quotes to add authority.
+- **Note:** Do not include or generate images in this version.
 
 ---
 
@@ -166,30 +135,23 @@ Instead of just explaining "what" or "how", inject specific cues to help the rea
 *Goal: Readiness for human eyes and search engines.*
 
 **Step 8.1 — Internal Linking**
-*Prompt:*
-> Analyse these website pages: [LIST OF RELEVANT URLS FROM CLIENT WEBSITE]. 
-> Suggest internal linking opportunities for this blog draft. Provide: Anchor text, Target page, Context where it fits naturally.
+- Integrate **5–7 internal links** from the client's website (services or other relevant blogs).
+- Ensure anchor text is natural and provides value to the reader.
 
-**Step 8.2 — Final Polish & Formatting**
-Ensure an 8th-grade reading level. Break down complex ideas with heavy use of bullet points.
+**Step 8.2 — Final Polish**
+- Ensure an 8th-grade reading level.
+- Confirm strict adherence to the "no contractions" and "no em dashes" rules.
 
 **Step 8.3 — Output Generation**
 - Output the final, formatted, copy-paste ready blog content.
-- **Metadata Output:** Ensure the following client data is attached to the final output:
-    - **Article Title:** [TITLE]
-    - **Article Body:** [ARTICLE_MARKDOWN]
-    - **Client Name:** [CLIENT NAME]
-    - **Website:** [CLIENT WEBSITE]
-    - **Email:** [CLIENT EMAIL]
-    - **Google Folder id:** [GOOGLE FOLDER ID]
-- **Ask User:** "Please review the provided content and client metadata. Approve final version?"
+- **Metadata Output:** Article Title, Body, Client Name, Website, Email, and Google Folder id.
 
 ---
 
 ## Phase 9: Publish & Notification
 *Goal: Finalise and deploy.*
 
-**Step 9.1 — Send to Webhook** *(Runs automatically upon Phase 8 approval)*
+**Step 9.1 — Send to Webhook**
 - **Webhook URL:** `https://dnseo.app.n8n.cloud/webhook-test/new-blog`
 - **Action:** Send a JSON payload containing:
     - `article_title`: [TITLE]
@@ -199,4 +161,3 @@ Ensure an 8th-grade reading level. Break down complex ideas with heavy use of bu
     - `email`: [CLIENT_EMAIL]
     - `google_folder_id`: [GOOGLE_FOLDER_ID]
 - **Confirmation:** Verify receipt of a 200 OK response.
-- **Ask User:** "Article sent to webhook successfully. Please provide the next topic you'd like to write about!"
